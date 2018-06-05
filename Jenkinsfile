@@ -11,6 +11,11 @@ pipeline {
         sh 'java -version'
       }
     }
+    stage('Checkpoint') {
+      steps {
+        checkpoint 'Checkpoint'
+      }
+    }
     stage('Get Kernel') {
       steps {
         script {
