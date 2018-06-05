@@ -8,10 +8,6 @@ pipeline {
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
         echo 'Hello $(MY_NAME)!'
-      }
-    }
-    stage('Second stage') {
-      steps {
         sh 'java -version'
       }
     }
