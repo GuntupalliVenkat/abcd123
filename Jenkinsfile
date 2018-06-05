@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('first stage') {
       steps {
-        echo 'Hello World'
+        echo 'Hello $(MY_NAME)!'
       }
     }
     stage('Second stage') {
@@ -13,5 +13,8 @@ pipeline {
         sh 'java -version'
       }
     }
+  }
+  environment {
+    MY_NAME = 'MARY'
   }
 }
